@@ -5,7 +5,6 @@ services:
 
 before_install:
   - docker build -t obusorezekiel/react-test -f ./client/Dockerfile.dev ./client
-  - docker build myotherproject .
   - echo "DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
 script:
