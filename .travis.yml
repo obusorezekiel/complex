@@ -5,7 +5,7 @@ services:
 
 before_install:
   - docker build -t obusorezekiel/react-test -f ./client/Dockerfile.dev ./client
-  - echo "DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
 script:
   - docker run -e CI=true obusorezekiel/react-test npm test
