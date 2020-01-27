@@ -4,7 +4,7 @@ services:
   - docker 
 
 before_install:
-  - docker build -t obusorezekiel/react-test -f ./client/Dockerfile.dev .
+  - docker build -t obusorezekiel/react-test -f ./client/Dockerfile.dev ./client
   - docker build myotherproject
 
 script:
